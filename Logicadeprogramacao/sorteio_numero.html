@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo sorteio</title>
+</head>
+<body>
+    <h3>Jogo de sorteio de números aleatorios</h3>
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteio(numero) {
+        return Math.round(Math.random() * numero);
+    }
+   
+    
+    var userkick = parseInt(prompt("Já pensei. Qual você acha que é?"));
+    var numeroPensado = sorteio(userkick);
+    
+    if(userkick == numeroPensado) {
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+        mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+    }
+</script>
+</body>
+</html>

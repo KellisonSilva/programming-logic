@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinhação</title>
+</head>
+<body>
+    <h3>Jogo de adivinhação da mãe DINÁ</h3>
+    <script>
+        function pularLinhas() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function mostrar(frase) {
+            document.write(frase);
+            pularLinhas();
+        }
+
+        var numeroPensado = Math.round(Math.random() * 10);
+        var tentativas = 3;
+        while(tentativas >= 1) {   
+            //var nome = prompt("Vamos jogar?! Diga o seu nome");
+            var userKick = parseInt(prompt("Qual é o seu chute!?"));
+        if(userKick == numeroPensado) {
+            mostrar(" você acertou!! o número pensado foi " + userKick);
+            break;
+        }else {
+            mostrar(" você errroooouuu!!!");
+        }
+        tentativas--;
+        }        
+        mostrar("The end");
+
+
+
+
+    </script>
+</body>
+</html>

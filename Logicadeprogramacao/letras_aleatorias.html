@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras</title>
+</head>
+<body>
+    <input/>
+    <button>Escolha uma Letra</button>
+    <script>
+
+        function sorteioDeLetras() {
+            var letras = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
+            var aleatorio="";        
+            var parte = Math.floor(Math.random() * letras.length);
+                aleatorio += letras.substring(parte, parte + 1);
+                return aleatorio;
+            }
+
+        function verificaLetra(quantidade) {
+         
+            var letras = [];
+            var numero = 1;
+
+            while(numero <= quantidade) {
+                var letraAleatoria = sorteioDeLetras();
+                var find = false;
+                for(i=0; i < letras.length; i++) {
+                    if(letras[i] == letraAleatoria) {
+                        find = true;
+                    }
+                }
+                    if(find == false) {
+                       letras.push(letraAleatoria);
+                       numero++;
+                    }
+                } 
+            return letras;
+        }
+           
+        var segredos = verificaLetra(6);
+        console.log(segredos);
+        var input = document.querySelector("input");
+        input.onclick = "input";
+
+        function verifica() {
+            var find = false;
+            for(i= 0; i < segredos.length; i++) {
+                if(input.value == segredos[i]) {
+                    alert("Você acertooou, a letra foi " + segredos[i]);
+                    find = true;
+                }
+            }
+            input.value = "";
+            input.focus();
+            if(find == false) {
+                alert("Não foi dessa vez");
+            }
+        }
+    
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+
+
+    
+    </script>
+</body>
+</html>

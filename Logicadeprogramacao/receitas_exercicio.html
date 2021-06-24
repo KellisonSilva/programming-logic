@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita</title>
+</head>
+<body>
+    <script>
+        var ingredientes = [];
+        var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+        var contador = 1;
+
+    while( contador <= quantidade) {
+        var contido = false;
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+    for(i=0; i < ingredientes.length; i++) {
+        if(ingredientes[i] == ingrediente) {
+            alert(ingrediente);
+            contido = true;
+            }
+        }
+        if(contido == false) {
+        ingredientes.push(ingrediente);
+        contador++;
+        }
+}
+
+console.log(ingredientes);
+    </script>
+</body>
+</html>

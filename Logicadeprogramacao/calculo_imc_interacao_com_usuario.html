@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h3>Calculo o IMC</h3>
+    <script>
+        function pulaLinhas() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+        }
+        function calculaIMC(peso, altura) {
+         return peso / (altura * altura);
+        }
+        
+        var nome = prompt("Informe seu nome");
+        var peso = prompt(nome + " informe seu peso");
+        var altura = prompt(nome + " informe sua altura");
+        var imcUser = Math.round(calculaIMC(peso, altura));
+        mostra(nome + " o resultado do seu IMC calculado é " + imcUser);
+
+        var base = 18.5;
+        //entre esse número quer dizer que esta no padrao.
+        var baseMaior = 35;
+        if(imcUser >= 18.5 && imcUser <= 35) {
+            pulaLinhas();
+            mostra( nome + " o seu IMC está na base ideial. ");
+        }else if(imcUser < 18.5 || imcUser > 35) {
+            pulaLinhas();
+            mostra( nome + " o seu IMC está fora da base ideial, procure um médico!");
+        }
+    </script>
+</body>
+</html>

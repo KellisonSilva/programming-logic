@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Resultado de quantas gerações se passaram até o momento que vivemos</h3>
+    <script>
+        function pularLinhas(){
+            document.write("<br>");
+        }
+        function calculaGeracao(anoAtual, ano) {
+            var resultado = anoAtual - ano;
+            var quantidadeMediaFilhos = 28;
+            var final = Math.round(resultado/quantidadeMediaFilhos);
+            document.write("<big>" + "se passaram " +  final + " gerações" + "</big>");
+        }
+        calculaGeracao(2016, 1500) + pularLinhas();
+    </script>
+</body>
+</html>

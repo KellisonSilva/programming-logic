@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu primeiro teste</title>
+</head>
+<h3>As informações sobre os usuários</h3>
+<script>
+    function pularlinas() {
+        document.write("<br>");
+    }
+    function nomesUsuarios(nome) {
+        var nome = nome;
+        document.write(nome);
+    }
+    function calculaIdadeUsuario(anoAtual, anoNascimento) {
+        var idade = anoAtual - anoNascimento;
+        document.write(" sua idade é " + idade + " anos ?");
+    }
+
+    function entrada() {
+        document.write("Olá meu caro..");
+    }
+   function calculaMediaIdadeUsuario(numero) {
+       var media = (numero + numero)/ 3;
+       document.write("A media é " + media);
+   }
+    entrada() + nomesUsuarios("jose") + calculaIdadeUsuario(2021, 1994) + pularlinas();
+    entrada() + nomesUsuarios("maria") + calculaIdadeUsuario(2021, 1996) + pularlinas();
+    entrada() + nomesUsuarios("jose") + calculaIdadeUsuario(2021, 1999) + pularlinas();
+    calculaMediaIdadeUsuario(3);
+</script>
+</body>
+</html>

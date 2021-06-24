@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula media de idades</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var familia = parseInt(prompt("Qual o total de pessoas na sua familia?"));
+    var numero = 1;
+
+    var totalIdade=0;
+
+    while(numero <= familia) {
+        var idade = parseInt(prompt("Informe a idade do primeiro familiar"));
+        totalIdade += idade;
+        numero++;
+    }
+    var mediaIdades = totalIdade/familia;
+    mostra("O resultado é " + mediaIdades);
+    
+    </script>
+</body>
+</html>

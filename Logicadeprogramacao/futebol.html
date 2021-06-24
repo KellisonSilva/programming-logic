@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar</title>
+</head>
+<body>
+    <script>
+        function pularLinhas() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function mostrar(frase) {
+            document.write(frase);
+            pularLinhas();
+        }
+
+    var vitorias = parseInt(prompt("Entre com um numero de vitorias"));
+    var empates = parseInt(prompt("Entre com o numero de empates"));
+    
+    var pontos = vitorias * 3 + empates;
+    mostrar("Os pontos do seu time é " + pontos);
+
+        if(pontos > 28){
+            mostrar("Seu time está melhor do que o ano passado." + pontos);
+        } else if(pontos < 28) {
+            mostrar("Seu time está pior do que o ano passado." + pontos);
+        }else if(pontos == 28) {
+            mostrar("Seu time está igual ao ano passado." + pontos);
+        }
+
+    </script>
+</body>
+</html>

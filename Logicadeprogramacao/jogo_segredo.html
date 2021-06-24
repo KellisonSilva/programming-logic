@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+</head>
+<body>
+    <input/>
+    <button>Compare com o meu segredo</button>
+    <script>
+        function sorteia() {
+            return Math.round(Math.random() * 10);
+        }
+
+        function sorteiaQuantidadeNumeroAleatorio(quantidade) {
+            var segredos = [];
+            var numero = 1;
+        while(numero <= quantidade) {
+            var numeroAleatorio = sorteia();    
+            if(numeroAleatorio != 0) {
+                var find = false;
+            for(i = 0; i < segredos.length; i++) {
+                if(segredos[i] == numeroAleatorio) {
+                    find = true;
+                    break;
+                }
+            }
+
+            if(find == false) {
+            segredos.push(numeroAleatorio);
+            numero++;
+            }
+         }
+        }
+        return segredos;
+    }
+        
+        var segredos = sorteiaQuantidadeNumeroAleatorio(3);
+
+        console.log(segredos);
+
+        var input = document.querySelector("input");
+        input.focus();
+        
+        function verifica() {
+            var find = false;
+            for(i= 0; i < segredos.length; i++) {
+            if(input.value == segredos[i]) {
+                alert("Você acertouuuu!! ");
+                find = true;   
+             }
+            }
+            input.value = "";
+            input.focus();
+            if(find == false) {
+                alert("Você ERRROOUU!!");
+            }
+            
+        }
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+    </script>
+</body>
+</html>
