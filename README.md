@@ -1,2 +1,2 @@
 # programming-logic
- exercising my logic in JavaScript
+ exercising my logic in JavaScript and HTML
